@@ -361,15 +361,16 @@ button{
     font-size: 18px;
     color: #bd2631;
     float: left;
-    margin: 2% 2%;
+    padding:  2% 2.5%;
 }
 .About:nth-child(-n+3){
     border-right: 1px #353535 solid;
-    height: 10%;
+
 }
 .footer-up-text{
     padding-top: 30px;
     padding-bottom: 30px;
+    line-height: 1;
     text-transform: uppercase;
 }
 .footer-text1 {
