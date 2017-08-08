@@ -9,19 +9,20 @@
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/fonts.css" >
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Hind:400,500,600" >
+
 </head>
 <body>
     <header>
         <div class="block1 contacts-info clearfix">
             <div class="address-info">
                 <div class="city">
-                    <samp>Philadelphia<i class="fa fa-angle-down" aria-hidden="true"></i></samp>
+                    <span>Philadelphia<i class="fa fa-angle-down" aria-hidden="true"></i></span>
                 </div>
                 <div class="phone">
-                    <span><i class="fa fa-phone" aria-hidden="true"> Toll-free:  800-455-0054  </i></span>
+                    <span><i class="fa fa-phone" aria-hidden="true"></i> Toll-free:  800-455-0054  </span>
                 </div>
                 <div class="address">
-                    <span><i class="fa fa-location-arrow" aria-hidden="true"> 200 Industrial Highway   Ridley Park, PA 19078</i></span>
+                    <span><i class="fa fa-location-arrow" aria-hidden="true"></i> 200 Industrial Highway   Ridley Park, PA 19078</span>
                 </div>
             </div>
             <div class="social">
@@ -36,7 +37,7 @@
         </div>
         <div class="block2 clearfix">
            <div class="logo">
-               <img src="imege/Layer-5.png" width= "100%">
+               <img src="imege/Layer-5.png">
            </div>
                 <div class="info">
                     <ul>
@@ -65,27 +66,47 @@
                 </div>
         </div>
     </header>
-    <div class="menu block3 clearfix" >
-                <img class="img" src="imege/Layer-411.png " width="100%">
-                <div class="picture-text">
-                    <h6 aria-hidden="true">We provide innovative</h6>
-                    <h4 aria-hidden="true">Battery back-up solutions for business.</h4>
-                    <h5 aria-hidden="true">Vral batteries are in stock for immediate delivery.</h5>
+    <div class="menu navigation clearfix" >
+        <nav>
+            <input id="mobile-menu" type="checkbox" class="fa fa-bars" aria-hidden="true">
+            <label for="mobile-menu"></label>
+            <ul class="menu">
+                <li class="current"><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Rentals</a></li>
+                <li><a href="#">Learning</a></li>
+                <li><a href="#footer">Contact</a></li>
+            </ul>
 
+        </nav>
+        <div class="search"><i class="fa fa-search" aria-hidden="true"></i></div>
+    </div>
+        <script src="js/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src='js/main.js'></script>
+
+                <div class='sliderB'>
+                    <input type="radio" name="slider1" id="slider1_1" checked="checked">
+                    <div>
+                        <div class="picture-text">
+                        <h4>We provide innovative</h4>
+                        <h3>Battery back-up solutions for business.</h3>
+                        <h5> VRLA BATTERIES ARE IN STOCK FOR IMMEDIATE DELIVERY.</h5>
+                         </div>
+                        <img src="imege/Layer-411.png" width="100%">
+                    </div>
+                    <label for="slider1_2"></label>
+                    <label for="slider1_2"></label>
+
+                    <input type="radio" name="slider1" id="slider1_2">
+                    <div>
+                        <p></p>
+                        <img src=imege/Layer-1.png width="100%">
+                    </div>
+                    <label for="slider1_1"><i class="fa-angle-right"></i></label>
+                    <label for="slider1_1"><i class="fa-angle-left"></i></label>
                 </div>
-            <nav>
-                <ul>
-                    <li class="current"><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Rentals</a></li>
-                    <li><a href="#">Learning</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><i  class="fa fa-search" aria-hidden="true"></i></li>
-                </ul>
-            </nav>
-        </div>
     <div class="content">
         <div class="redline clearfix" >
             <p>
@@ -121,30 +142,30 @@
                 <img src="imege/Layer-47.png" width="50.01%" class="dark"><img src="imege/Layer-37.png" class="icon-position3" width= "9%" height= "12%"><img src="imege/Layer-44.png" width="23.55%">
             </div>
         </div>
-    <div class="black-icon clearfix ">
-        <img src="imege/Layer-29.png" width="10%" class="icon-shild">
-        <img src="imege/Layer-24.png" width="14%" class="icon-eco">
-        <img src="imege/Layer-27.png" width="14%" class="icon-clock">
+
     </div>
-        <div class="black-icon-text " >
+        <div class="black-icon-text black-icon clearfix" >
             <div class="icon-text1">
+                <img src="imege/Layer-29.png" width="10%" class="icon-shild">
                 <h3> Safe</h3>
                 <p><span>CPR and forklift certified personnel<br>
                         Spill kits and safety kits on all sites and vehicles<br>
                         Certified and calibrated tools</span></p>
             </div>
             <div class="icon-text1">
+                <img src="imege/Layer-24.png" width="14%" class="icon-eco">
                 <h3> Green</h3>
                 <p><span>Smelter facility for battery disposal<br>
                         $5,000,000.00 pollution legal liability for the<br>
                         transportation and handling of lead acid batteries.</span></p>
             </div>
-            <div class="icon-text1">
-                <h3> Ready</h3>
-                <p><span>Toll free 24/7 emergency service line with<br>
+                <div class="icon-text1">
+                    <img src="imege/Layer-27.png" width="14%" class="icon-clock">
+                    <h3> Ready</h3>
+                    <p><span>Toll free 24/7 emergency service line with<br>
                         immediate dispatching. Most products available<br>
                         to ship within 24 hours.</span></p>
-            </div>
+                 </div>
         </div>
     <div class="black-line clearfix">
         <img src="imege/Layer-49.png" width="15%" class="logo2">
@@ -169,7 +190,7 @@
                     <img src="imege/Layer-22.png" width="13.5%">
                 </div>
     </div>
-    <div class="footer clearfix">
+    <div class="footer clearfix" id="footer">
 
             <div class="About">
                 <p class="footer-up-text">About US</p>
@@ -186,14 +207,14 @@
                 <p class="footer-text1">How Do You Rate? Understanding Battery</p>
                 <p class="footer-text1">Ratings Beyond AA</p>
                 <p class="footer-text1">Six Critical Needs for any Critical Power Maintenance Provider</p>
-                <p class="footer-text1">Are You at Risk for These Leading Causes of UPS Power Failure?</p><br>
+                <p class="footer-text1">Are You at Risk for These Leading Causes of UPS Power Failure?</p>
 
             </div>
             <div class="About">
                 <p class="footer-up-text">Recent Tweets</p>
                 <p class="footer-text1">Sure Power is 600 Days Injury Free - https://t.co/3fjAz1RKUo<br> 8 days ago</p>
                 <p class="footer-text1">Delta’s system meltdown causes canceled flights, puts focus on aging technology https://t.co/HZIM3gdEY7 via @WSJ The Wall Street Journal
-                    <br>162 days ago.</p><br><br><br><br><br><br><br>
+                    <br>162 days ago.</p>
             </div>
             <div class="About">
                 <p class="footer-up-text"> Contact Information <p>

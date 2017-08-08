@@ -3,7 +3,7 @@
     padding:0;
 }
 body{
-    font: 400 14px/.5 'Hine', sans-serif;
+    font: 400 14px/.5 'Hind', sans-serif;
     color:#565655;
 }
 a{
@@ -34,10 +34,10 @@ ul li{
     clear:both;
 }
 
-/*HEDER*/
+/*HEADER*/
 .contacts-info{
     background:#ededed ;
-    padding:13px 130px;
+    padding:13px 100px;
 }
 .address-info{
     float:left;
@@ -52,7 +52,7 @@ ul li{
 }
 .social{
     float: right;
-    margin-top: 7px;
+    margin-top: 9px;
 }
 .social ul li {
     margin-left: 20px;
@@ -72,7 +72,7 @@ ul li{
 /*logo*/
 .block2{
     background-color: #ffffff;
-    padding: 31px 130px;
+    padding: 31px 100px;
 }
 .logo{
     float:left;
@@ -81,7 +81,7 @@ ul li{
     float:right;
 }
 .title{
-    font-family: Hind;
+    font-family: 'Hind';
     color: #000;
     font-weight: 700;
     font-size: 15px;
@@ -115,46 +115,159 @@ ul li{
     margin-right: 0;
 }
 
-/*menu and slayder*/
+/*menu and slider*/
+.sliderB {
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+}
 
+.sliderB > input {
+    display: none;
+}
+
+.sliderB > label {
+    display: none;
+}
+
+.sliderB > input:checked + div + label,
+.sliderB > input:checked + div + label + label {
+    display: block;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(27, 27, 27, 0);
+
+    cursor: pointer;
+    position: relative;
+   margin-top: 28.5%;
+   margin-bottom: 28.5%;
+
+}
+
+.sliderB > input:checked + div + label:after,
+.sliderB > input:checked + div + label + label:after {
+    font-size: 30px;
+    color: #fff;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    line-height: 80px;
+}
+
+.sliderB > input:checked + div + label {
+    float: left;
+}
+
+.sliderB > input:checked + div + label:after {
+    content: '◀';
+    left: 55%;
+}
+
+.sliderB > input:checked + div + label + label {
+    float:right;
+}
+
+.sliderB > input:checked + div + label + label:after {
+    content: '▶';
+    right: 55%;
+}
+
+.sliderB > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.sliderB > div {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0.9s;
+}
+
+.sliderB > input:checked + div {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.8s ease-out 0.1s, visibility 0.1s ease-out 0s;
+}
+
+.sliderB > div > p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+}
+
+/*/////////////////////*/
 .picture-text{
+    width: 50%;
     display: block;
     padding-left: 120px;
     padding-top: 20%;
     position: absolute;
 }
-.picture-text h6{
+.picture-text h4{
     color:#bd2631;
     font-size: 35px;
     font-weight: bold;
 }
-.picture-text h4{
+.picture-text h3{
     color:white;
-    font-size: 40px;
+    font-size: 42px;
+    line-height: 1;
 }
 .picture-text h5{
     text-transform: uppercase;
     color:white;
-    font-size: 20px;
+    font-size: 23px;
 }
 .picture-text h6, h5, h4{
-    font-family: Hind;
+    font-family:'Hind';
     line-height: 1.5;
 }
-.img{
-    width: 100%;
-    float: left;
-    position: relative;
-    background-color: #000;
-}
-.menu nav{
-    font-family: Hind;
-    width: 92%;
-    padding-left:100px;
-    background-color: #000;
-    opacity: 0.8;
+.navigation nav{
     position: absolute;
     float: left;
+}
+#mobile-menu{
+    display: none;
+}
+#mobile-menu + label{
+    display: none;
+    padding-top: 23px;
+    padding-left: 30px;
+    position: relative;
+    color: #fff;
+    height: 20px;
+    z-index: 1;
+    cursor: pointer;
+}
+#mobile-menu + label:before{
+    content: '\f0c9';
+    display: inline-block;
+    font-family:'Hind';
+    font-size: 22px;
+}
+#btn-menu:checked + label:before{
+    content: '\f00d';
+    color: #f00;
+}
+
+.current{
+    padding-left: 70px;
+}
+.menu nav{
+    width: 100%;
+    background-color: #000;
+    opacity: 0.8;
+    float: left;
+    z-index: 1;
 }
 .menu nav a {
     width: 100%;
@@ -163,7 +276,7 @@ ul li{
     color: white;
     display: inline-block;
     text-transform: uppercase;
-    padding:37px 15px 10px;
+    padding:37px 15px 8px;
 }
 nav li a:after{
     margin-top: 20px;
@@ -178,36 +291,39 @@ nav li a:hover:after,
 nav li a:focus:after{
     width:100%;
 }
-.menu nav ul li:last-child{
-    float: right;
-    padding-top: 30px;
-    padding-right: 120px;
+.search {
+    z-index: 1;
+    position: absolute;
+    margin-top:30px;
+    margin-left: 92%;
     color: #fff;
-    font-size: 20px;
+    font-size: 25px;
+    cursor: pointer;
+
 }
 
 /*Red line*/
 .content{
+    font-family:'Hind';
     background-color: #bd2631;
 }
 .redline p {
-    padding: 40px 120px;
+    padding: 40px 0 40px 120px;
     color:white;
     line-height: 1;
     display: inline-block;
 }
 .text-line{
-    font-family: Hind;
     font-size: 30px;
     font-weight:300;
 }
 .text-line2{
-    font-family: Hind;
     font-size: 22px;
     font-weight: 300;
 }
 button{
-    margin:40px 120px;
+    margin-top:40px;
+    margin-right: 100px;
     padding:16px 29px;
     border-radius: 3px;
     border: none;
@@ -219,12 +335,14 @@ button{
 
 /*Photo content*/
 .picture-text1{
-    margin: 10% 120px;
+    width: 40%;
+    margin: 8% 100px;
     position: absolute;
     display: inline-block;
 }
 .picture-text1 h6, .picture-text2 h6{
-     line-height: 3;
+     line-height: 1;
+    padding-bottom:5% ;
      color:#bd2631;
      font-size: 30px;
  }
@@ -235,12 +353,12 @@ button{
     font-size: 13px;
 }
 .picture-text1 h6, h5, .picture-text2 h6, h5{
-    font-family: Hind;
+    font-family: 'Hind';
     font-weight: 400;
 }
 .picture-text2{
-    margin-top: 10%;
-    margin-left: 60%;
+    margin-top: 8%;
+    margin-left: 58%;
     position: absolute;
     display: inline-block;
 }
@@ -264,30 +382,28 @@ button{
     background-color: #000;
 }
 /*icon and text*/
-.black-icon{
-    padding:0 14%;
+.black-icon img{
+    padding-bottom: 5%;
 }
-.black-icon  .icon-shild{
-    display: inline-block;
-    margin: 5%;
+.icon-shild{
+    width: 30%;
+    margin-left: 36%;
 }
 .icon-eco{
-    margin: 5% 23%;
+    width: 42%;
+    margin:0 30%;
 }
-.black-icon .icon-clock{
-    float:right;
-    margin-right: 5%;
-    margin-top: 5%;
+.icon-clock{
+    width: 43%;
+    margin-left: 28%;
 
-}
-.black-icon-text {
-    padding: 2px 100px;
 }
 .icon-text1{
     width: 30%;
     display: inline-block;
-    padding-bottom: 6%;
+    padding-bottom: 5%;
     padding-right: 3.3%;
+    padding-top: 4%;
     float:left;
 }
 .icon-text1 h3{
@@ -316,10 +432,11 @@ button{
 }
 .text-line3
 {
-    font-family:Hind;
+    font-family:'Hind';
     position: absolute;
     padding-top: 6%;
     padding-left: 2%;
+    line-height: 1;
     color: white;
     font-size: 30px;
 }
@@ -329,7 +446,7 @@ button{
 }
 /*red line text decoration*/
 .red-box{
-    font-family:Hind;
+    font-family:'Hind';
     background-color: #bd2631;
     color:white;
     font-size: 18px;
@@ -339,6 +456,7 @@ button{
     padding-top: 2%;
     padding-bottom: 2%;
     width: 15.5%;
+    line-height: 1;
 }
 /*logo icon line*/
 .logo-icon{
@@ -352,7 +470,7 @@ button{
 
 .footer{
     background-color: #242424;
-    font-family:Hind ;
+    font-family:'Hind';
     padding: 0 100px;
     display: inline-block;
 }
@@ -403,9 +521,334 @@ button{
     background-color: #131313;
     color: white;
     margin-bottom: 1.5%;
-    font-family: Hind ;
+    font-family: 'Hind';
     font-size: small;
+    line-height: 1;
 }
 .footer-line span:last-child{
     float:right;
+}
+/*media*/
+@media screen and (max-width: 1060px) {
+    .contacts-info {
+        padding: 13px 70px;
+    }
+
+    .logo,
+    .info {
+        float: none;
+    }
+
+    .logo, .info {
+        text-align: center;
+    }
+
+    .sliderB > input:checked + div + label,
+    .sliderB > input:checked + div + label + label {
+        margin-top: 25%;
+        margin-bottom: 25%;
+    }
+    .current {
+        padding-left: 30px;
+    }
+
+    .redline p {
+        padding: 20px 60px;
+    }
+
+    .text-line {
+        font-size: 25px;
+    }
+
+    .text-line2 {
+        font-size: 15px;
+    }
+
+    button {
+        margin: 20px;
+    }
+    .picture-text h3{
+       font-size:23px ;
+    }
+    .picture-text h4{
+        font-size:25px ;
+    }
+    .picture-text h5{
+        font-size:14px;
+    }
+
+    .picture-text1 {
+        width: 30%;
+        margin: 5%;
+    }
+
+    .icon-text1 h3 {
+        font-size: 25px;
+    }
+
+    .icon-text1 p {
+        font-size: 14px;
+    }
+
+    .picture-text2 {
+        width: 30%;
+        margin-top: 5%;
+    }
+
+    .text-line3 {
+        font-size: 20px;
+    }
+
+    .red-box {
+        font-size: 14px;
+        line-height: 1;
+    }
+    .footer{
+        padding: 0 10px;
+    }
+}
+@media screen and (max-width: 995px) {
+    .block1 {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    nav li a {
+        font-size: 14px;
+        padding: 24px 12px 16px;
+    }
+}
+@media screen and (max-width: 780px){
+    .navigation{
+        position: absolute;
+    }
+    div.phone,
+    div.address{
+        display: block;
+        margin: 10px 0;
+    }
+    .social ul li {
+        display: block;
+        padding-top: 3px;
+    }
+    .block2{
+        padding: 0;
+    }
+    .search{
+        margin-top: 15px;
+        font-size: 20px;
+        margin-left: 0;
+    }
+    .info ul li {
+        margin: 2px 0;
+    }
+    nav ul{
+        float:left;
+        display: none;
+        background: #000;
+        top: 66px;
+        left: 0;
+        padding: 0 50px;
+        box-sizing: border-box;
+    }
+    .menu{
+        padding: 20px;
+    }
+    #mobile-menu + label{
+        display: inline-block;
+    }
+    #mobile-menu + label + .menu{
+        display: none;
+    }
+    #mobile-menu:checked + label + .menu{
+        display: block;
+    }
+    .menu li{
+        display: block;
+        padding: 10px 0 0 0;
+        border-bottom: 1px solid #e6e6e6;
+    }
+    .menu nav a{
+        font-size: 16px;
+    }
+    .menu li a,
+    .menu li a:hover{
+        border-bottom: none;
+    }
+    .menu li a{
+        padding: 0;
+    }
+    nav li a:after{
+        margin-top:5px;
+        display: block;
+        content: "";
+        height: 3px;
+        width:0;
+        background-color:#bd2631;
+        transition: width .3s ease-in-out;
+    }
+    .picture-text{
+        padding: 10%;
+    }
+    .picture-text h3{
+        font-size:16px ;
+    }
+    .picture-text h4{
+        font-size:20px ;
+    }
+    .picture-text h5{
+        font-size:12px;
+    }
+    .logo-icon img{
+        padding: 3% 2%;
+    }
+    .redline p {
+        padding: 15px 0 15px 15px ;
+    }
+    .text-line{
+        font-size: 20px;
+    }
+    .text-line2{
+        font-size: 14px;
+    }
+    button{
+        font-size: 12px;
+        margin: 15px;
+        padding: 9px 8px 9px;
+    }
+    .picture-text1 h6 , .picture-text2 h6{
+        font-size: 20px;
+    }
+    .picture-text2 h5,.picture-text1 h5{
+        font-size: 10px;
+    }
+    .icon-text1 h3{
+        font-size: 20px;
+    }
+    .icon-text1 p{
+        font-size: 12px;
+    }
+    .logo2{
+        padding-top: 4%;
+        padding-left: 12%;
+
+    }
+    .footer .About{
+        width: 93%;
+        float:none;
+        border-right: none;
+        border-bottom: 1px #353535 solid ;
+    }
+    .footer-up-text{
+        padding: 5px;
+        font-size: 15px;
+    }
+    .footer-text1{
+        line-height: 1;
+        margin-bottom: 7px;
+    }
+}
+@media screen and (max-width: 570px){
+    .logo img{
+        width: 55%;
+    }
+    .info ul li{
+        padding-right: 0;
+        margin: 10px 0;
+        border: none;
+        text-align: left;
+    }
+    .picture-text{
+        margin-top: 0;
+        margin-left: 13%;
+    }
+    .sliderB > input:checked + div + label, .sliderB > input:checked + div + label + label {
+        margin-top: 22%;
+        margin-bottom: 22%;
+    }
+    .redline p {
+        width: 70%;
+        padding: 3px;
+    }
+    .text-line{
+        font-size: 15px;
+    }
+    .text-line2{
+        font-size: 12px;
+    }
+    button{
+        font-size: 11px;
+        margin: 10px;
+        padding: 11px 8px;
+    }
+    .red-box li{
+        padding: 7px;
+    }
+    .red-box{
+        font-size:13px ;
+    }
+    .picture-text1 h6, .picture-text2 h6{
+        font-size: 15px;
+    }
+    .picture-text1 h5, .picture-text2 h5{
+        font-size: 8px;
+    }
+    .logo2{
+        padding-left: 10%;
+    }
+    .text-line3{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 440px){
+    .contacts-info{
+        padding: 2px 3px;
+    }
+    .contacts-information > div {
+        float: none;
+    }
+    .menu{
+        padding-top:7px ;
+    }
+    .social-icons ul li {
+        margin: 0 20px 0 0;
+    }
+    .logo img{
+        width: 55%;
+        height: auto;
+    }
+
+}
+@media screen and (max-width: 390px) {
+    .block {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .block2{
+        padding: 2px 2px;
+    }
+    .info ul li{
+        width: auto;
+        float: left;
+        margin: 10px 0;
+    }
+    .mobile-menu li{
+
+    }
+    .picture-text1{
+       margin: 1%;
+    }
+    .picture-text2{
+        margin-top: 1%;
+        margin-left: 52%;
+    }
+    nav ul{
+        padding: 0 20px;
+    }
+    .text-line3 {
+        font-size: 12px;
+    }
+    .red-box{
+        font-size: 9px;
+    }
 }
